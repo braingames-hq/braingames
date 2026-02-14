@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brain Games Support - Get help with Brain Games puzzle app for iOS.">
+    <title>Support - Brain Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+
+    <header id="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Brain Games</h1>
+                </a>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="support.html" class="active">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <main class="page-content">
+            <h1>Support</h1>
+            <p class="last-updated">We're here to help</p>
+
+            <section>
+                <h2>Contact Us</h2>
+                <p>Have questions, feedback, or need help with Brain Games? We'd love to hear from you.</p>
+
+                <div style="text-align: center; margin: 60px 0;">
+                    <a href="mailto:yogi.badke@gmail.com" class="btn btn-primary">
+                        Email Support
+                    </a>
+                </div>
+
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:yogi.badke@gmail.com">yogi.badke@gmail.com</a></p>
+                    <p style="margin-top: 16px; color: var(--text-muted);">We typically respond within 24-48 hours.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Common Questions</h2>
+
+                <h3>How do I restore my purchase?</h3>
+                <p>Open Brain Games, and tap "Restore Purchase" on the home screen. Make sure you're signed in with the same Apple ID you used for the original purchase.</p>
+
+                <h3>The app isn't working on my device</h3>
+                <p>Brain Games requires iOS 15.1 or later. Please ensure your device is updated to the latest iOS version. If the issue persists, try deleting and reinstalling the app (your purchase can be restored).</p>
+
+                <h3>How do I request a refund?</h3>
+                <p>All purchases are processed by Apple. To request a refund, visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> and follow Apple's refund process.</p>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Brain Games</h3>
+                    <p>Offline puzzle games for iOS</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <nav>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="support.html">Support</a>
+                    </nav>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:yogi.badke@gmail.com">yogi.badke@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Brain Games. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
+
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
